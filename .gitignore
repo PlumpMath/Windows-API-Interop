@@ -1,2 +1,4 @@
 
 *.suo
+/Bin
+/Libraries/Windows API/obj
