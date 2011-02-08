@@ -39,6 +39,13 @@ namespace Codeology.WinAPI
         [DllImport(LIB_NAME)]
         public static extern bool UnregisterClass(string lpClassName, IntPtr hInstance);
 
+        [DllImport(LIB_NAME, CharSet = CharSet.Auto)]
+        public static extern IntPtr SendMessage(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam);
+
+        [DllImport(LIB_NAME, SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool PostMessage(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam);
+
         [DllImport(LIB_NAME)]
         public static extern IntPtr SetClipboardViewer(IntPtr hWndNewViewer);
 
@@ -48,9 +55,6 @@ namespace Codeology.WinAPI
         [DllImport(LIB_NAME)]
         [return: MarshalAs(UnmanagedType.Bool)]
         public static extern bool ChangeClipboardChain(IntPtr hWndRemove, IntPtr hWndNewNext);
-
-        [DllImport(LIB_NAME, SetLastError = true)]
-        public static extern int SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
 
     }
 
