@@ -72,7 +72,7 @@ namespace Codeology.WinAPI
         }
 
         [StructLayout(LayoutKind.Sequential)]
-        internal struct WlanAvailableNetworkListHeader
+        public struct WlanAvailableNetworkListHeader
         {
             public readonly uint numberOfItems;
             private uint index;
@@ -102,10 +102,10 @@ namespace Codeology.WinAPI
 
 
         [StructLayout(LayoutKind.Sequential)]
-        internal struct WlanBssListHeader
+        public struct WlanBssListHeader
         {
             private readonly uint totalSize;
-            internal readonly uint numberOfItems;
+            public readonly uint numberOfItems;
         }
 
         [StructLayout(LayoutKind.Sequential, CharSet=CharSet.Unicode)]
@@ -157,7 +157,7 @@ namespace Codeology.WinAPI
         }
 
         [StructLayout(LayoutKind.Sequential)]
-        internal struct WlanInterfaceInfoListHeader
+        public struct WlanInterfaceInfoListHeader
         {
             public readonly uint numberOfItems;
             private readonly uint index;
@@ -198,7 +198,7 @@ namespace Codeology.WinAPI
         }
 
         [StructLayout(LayoutKind.Sequential)]
-        internal struct WlanProfileInfoListHeader
+        public struct WlanProfileInfoListHeader
         {
             public readonly uint numberOfItems;
             private readonly uint index;
