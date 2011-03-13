@@ -44,6 +44,11 @@
     <Compile Include="User\Enums.cs" />
     <Compile Include="User\Functions.cs" />
     <Compile Include="User\Structs.cs" />
+    <Compile Include="WLAN\Consts.cs" />
+    <Compile Include="WLAN\Delegates.cs" />
+    <Compile Include="WLAN\Enums.cs" />
+    <Compile Include="WLAN\Functions.cs" />
+    <Compile Include="WLAN\Structs.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
