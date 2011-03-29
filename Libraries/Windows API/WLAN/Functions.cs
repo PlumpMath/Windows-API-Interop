@@ -47,6 +47,9 @@ namespace Codeology.WinAPI
         [DllImport(LIB_NAME)]
         public static extern int WlanGetNetworkBssList([In] IntPtr clientHandle, [In, MarshalAs(UnmanagedType.LPStruct)] Guid interfaceGuid, [In] IntPtr dot11SsidInt, [In] Dot11BssType dot11BssType, [In] bool securityEnabled, IntPtr reservedPtr, out IntPtr wlanBssList);
         
+        //[DllImport(LIB_NAME)]
+        //public static extern int WlanGetNetworkBssList([In] IntPtr clientHandle, [In, MarshalAs(UnmanagedType.LPStruct)] Guid interfaceGuid, [In] WLAN.Dot11Ssid dot11Ssid, [In] Dot11BssType dot11BssType, [In] bool securityEnabled, IntPtr reservedPtr, out IntPtr wlanBssList);
+
         [DllImport(LIB_NAME)]
         public static extern int WlanGetProfile([In] IntPtr clientHandle, [In, MarshalAs(UnmanagedType.LPStruct)] Guid interfaceGuid, [In, MarshalAs(UnmanagedType.LPWStr)] string profileName, [In] IntPtr pReserved, out IntPtr profileXml, [Optional] out WlanProfileFlags flags, [Optional] out WlanAccess grantedAccess);
         

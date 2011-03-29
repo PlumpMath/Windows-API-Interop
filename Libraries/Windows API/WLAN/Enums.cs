@@ -83,7 +83,7 @@ namespace Codeology.WinAPI
         }
 
         [Flags]
-        private enum WlanAvailableNetworkFlags
+        public enum WlanAvailableNetworkFlags
         {
             Connected = 1,
             HasProfile = 2

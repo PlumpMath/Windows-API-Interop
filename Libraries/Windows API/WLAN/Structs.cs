@@ -45,30 +45,29 @@ namespace Codeology.WinAPI
         {
             [MarshalAs(UnmanagedType.ByValTStr, SizeConst=0x100)] private readonly string profileName;
             public Dot11Ssid dot11Ssid;
-            private readonly Dot11BssType dot11BssType;
-            private readonly uint numberOfBssids;
-            private readonly bool networkConnectable;
-            private readonly WlanReasonCode wlanNotConnectableReason;
-            private readonly uint numberOfPhyTypes;
+            public readonly Dot11BssType dot11BssType;
+            public readonly uint numberOfBssids;
+            public readonly bool networkConnectable;
+            public readonly WlanReasonCode wlanNotConnectableReason;
+            public readonly uint numberOfPhyTypes;
             [MarshalAs(UnmanagedType.ByValArray, SizeConst=8)]
-            private readonly Dot11PhyType[] dot11PhyTypes;
-
-            private readonly bool morePhyTypes;
+            public readonly Dot11PhyType[] dot11PhyTypes;
+            public readonly bool morePhyTypes;
             public readonly uint wlanSignalQuality;
-            private readonly bool securityEnabled;
+            public readonly bool securityEnabled;
             public readonly Dot11AuthAlgorithm dot11DefaultAuthAlgorithm;
             public readonly Dot11CipherAlgorithm dot11DefaultCipherAlgorithm;
-            private readonly WlanAvailableNetworkFlags flags;
-            private readonly uint reserved;
+            public readonly WlanAvailableNetworkFlags flags;
+            public readonly uint reserved;
             public Dot11PhyType[] Dot11PhyTypes
             {
-                get
-                {
+                get {
                     Dot11PhyType[] destinationArray = new Dot11PhyType[numberOfPhyTypes];
                     Array.Copy(dot11PhyTypes, destinationArray, numberOfPhyTypes);
                     return destinationArray;
                 }
             }
+
         }
 
         [StructLayout(LayoutKind.Sequential)]
@@ -219,7 +218,7 @@ namespace Codeology.WinAPI
                     return destinationArray;
                 }
             }
-            public double GetRateInMbps(int rate)
+            public double GetRateInMbps(ushort rate)
             {
                 return ((rateSet[rate] & 0x7fff) * 0.5);
             }
