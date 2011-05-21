@@ -56,6 +56,15 @@ namespace Codeology.WinAPI
         [return: MarshalAs(UnmanagedType.Bool)]
         public static extern bool ChangeClipboardChain(IntPtr hWndRemove, IntPtr hWndNewNext);
 
+        [DllImport(LIB_NAME)] 
+        public static extern bool SetForegroundWindow(IntPtr hWnd);
+
+        [DllImport(LIB_NAME)] 
+        public static extern bool ShowWindowAsync(IntPtr hWnd,int nCmdShow);
+
+        [DllImport(LIB_NAME)] 
+        public static extern bool IsIconic(IntPtr hWnd);
+
     }
 
 }

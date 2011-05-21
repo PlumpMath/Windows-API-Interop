@@ -19,6 +19,9 @@ namespace Codeology.WinAPI
         // GetWindowLong Constants
         public const int GWL_WNDPROC = -4;
 
+        // ShowWindow Constants
+        public const int SW_RESTORE = 9;
+
     }
 
 }
