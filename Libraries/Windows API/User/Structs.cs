@@ -12,10 +12,13 @@ namespace Codeology.WinAPI
         [StructLayout(LayoutKind.Sequential)]
         public struct WNDCLASSEX
         {
+
            public uint cbSize;
            public ClassStyles style;
+
            [MarshalAs(UnmanagedType.FunctionPtr)]
            public WindowProc lpfnWndProc;
+
            public int cbClsExtra;
            public int cbWndExtra;
            public IntPtr hInstance;
@@ -25,6 +28,21 @@ namespace Codeology.WinAPI
            public string lpszMenuName;
            public string lpszClassName;
            public IntPtr hIconSm;
+
+        }
+
+        [StructLayout(LayoutKind.Sequential)]
+        public struct LASTINPUTINFO
+        {
+
+	        public static readonly int SizeOf = Marshal.SizeOf(typeof(LASTINPUTINFO));
+
+	        [MarshalAs(UnmanagedType.U4)]
+	        public int cbSize;
+
+	        [MarshalAs(UnmanagedType.U4)]
+	        public uint dwTime;
+
         }
 
     }

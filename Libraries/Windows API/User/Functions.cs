@@ -65,6 +65,9 @@ namespace Codeology.WinAPI
         [DllImport(LIB_NAME)] 
         public static extern bool IsIconic(IntPtr hWnd);
 
+        [DllImport(LIB_NAME)]
+        public static extern bool GetLastInputInfo(ref LASTINPUTINFO lii);
+
     }
 
 }
