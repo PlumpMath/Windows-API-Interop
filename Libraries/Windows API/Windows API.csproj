@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Kernel\Consts.cs" />
+    <Compile Include="Kernel\Enums.cs" />
     <Compile Include="Kernel\Functions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User\Consts.cs" />
